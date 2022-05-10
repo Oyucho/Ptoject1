@@ -11,7 +11,7 @@ const entryResultRow = document.querySelector(`.entryResultRow`);
 let getEntryTitle = document.getElementsByClassName(`entry-text-title`);
 let getEntryText = document.getElementsByClassName(`entry-text-box`);
 
-let data = [];
+let data = JSON.parse(localStorage.getItem("todos")) || [];
 const entryHeading = document.createElement(`h3`);
 const entryParagraph = document.createElement(`p`);
 const entryDiv = document.createElement(`div`);
@@ -64,16 +64,14 @@ function addEntryToDom(event) {
   data.push({ title: getEntryTitle[0].value, text: getEntryText[0].value });
   //   entryParagraph.textContent = getEntryText[0].value;
   //   entryDiv.appendChild(entryParagraph);
-  getEntryText[0].value = ``;
   localStorage.setItem("todos", JSON.stringify(data));
+  getEntryText[0].value = ``;
 }
 
 entryForm.addEventListener(`submit`, addEntryToDom);
+console.log(data);
 
-let newData = JSON.parse(localStorage.getItem("todos"));
-console.log(newData);
-
-newData.forEach((info) => {
+data.forEach((info) => {
   entryHeading.textContent = info.title;
   entryParagraph.textContent = info.text;
   entryDiv.appendChild(entryHeading);

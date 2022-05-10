@@ -130,25 +130,25 @@ input[class^="btn-"]:hover {
   border-radius: 2px;
   border: unset;
   background-color: lightgoldenrodyellow;
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto", monospace;
 }
 
 .entry-text-title:focus {
   outline-color: lightcoral;
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto", monospace;
   color: lightcoral;
   font-size: 1rem;
 }
 
 .entry-text-title::placeholder {
   color: lightcoral;
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto", monospace;
   font-size: 1rem;
 }
 
 .entry-text-title::-ms-value {
   color: lightcoral;
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto", monospace;
   font-size: 1rem;
 }
 
@@ -179,7 +179,7 @@ input[class^="btn-"]:hover {
   border-radius: 2px;
   border: unset;
   background-color: lightgoldenrodyellow;
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto", monospace;
 }
 
 @media (min-width: 769px) {
